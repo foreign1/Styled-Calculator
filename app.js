@@ -17,3 +17,5 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
+
+app.listen(port, () => console.info(`App listening on port ${port}`));
