@@ -18,4 +18,16 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
 
+app.get("/app", (req, res) => {
+  res.sendFile(__dirname + "/public/css/app.css");
+});
+
+app.get("/about", (req, res) => {
+  res.sendFile(
+    __dirname + "/views/about.html",
+    __dirname + "/public/css/styles.css",
+    __dirname + "/public/js/main.js"
+  );
+});
+
 app.listen(port, () => console.info(`App listening on port ${port}`));
